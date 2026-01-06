@@ -1,0 +1,152 @@
+frameworks:
+  react:
+    name: "React"
+    base_url: "https://react.dev"
+    start_urls:
+      - "https://react.dev/learn"
+      - "https://react.dev/reference/react"
+      - "https://react.dev/reference/react-dom"
+      - "https://react.dev/reference/react-dom/client"
+      - "https://react.dev/reference/react-dom/server"
+      - "https://react.dev/reference/rules"
+    skip_patterns:
+      - "/blog"
+      - "/community"
+      - "/versions"
+      - "/_next/"
+    selectors:
+      content: "main"
+      remove:
+        - "nav"
+        - "footer"
+        - ".sidebar"
+        - '[aria-label="Navigation"]'
+    chunk_size: 1000
+    overlap: 200
+
+  nextjs:
+    name: "Next.js"
+    base_url: "https://nextjs.org"
+    start_urls:
+      - "https://nextjs.org/docs"
+    skip_patterns:
+      - "/blog"
+      - "/showcase"
+      - "/conf"
+      - "/templates"
+      - "/_next/"
+    selectors:
+      content: "main"
+      remove:
+        - "nav"
+        - "footer"
+        - ".sidebar"
+    chunk_size: 1000
+    overlap: 200
+
+  typescript:
+    name: "TypeScript"
+    base_url: "https://www.typescriptlang.org"
+    start_urls:
+      - "https://www.typescriptlang.org/docs"
+      - "https://www.typescriptlang.org/docs/handbook/intro.html"
+      - "https://www.typescriptlang.org/docs/handbook/2/basic-types.html"
+      - "https://www.typescriptlang.org/tsconfig"
+      - "https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html"
+    skip_patterns:
+      - "/play"
+      - "/download"
+      - "/community"
+      - "/cheatsheets"
+    selectors:
+      content: "main"
+      remove:
+        - "nav"
+        - "footer"
+        - "#sidebar"
+    chunk_size: 1000
+    overlap: 200
+
+  tailwind:
+    name: "Tailwind CSS"
+    base_url: "https://tailwindcss.com"
+    start_urls:
+      - "https://tailwindcss.com/docs/installation"
+      - "https://tailwindcss.com/docs/utility-first"
+      - "https://tailwindcss.com/docs/preflight"
+      - "https://tailwindcss.com/docs/aspect-ratio"
+    skip_patterns:
+      - "/blog"
+      - "/showcase"
+      - "/resources"
+      - "/brand"
+      - "/plus"
+    selectors:
+      content: "#content-wrapper"
+      remove:
+        - "nav"
+        - "footer"
+        - "#sidebar"
+    chunk_size: 1000
+    overlap: 200
+
+  fastapi:
+    name: "FastAPI"
+    base_url: "https://fastapi.tiangolo.com"
+    start_urls:
+      - "https://fastapi.tiangolo.com/tutorial/"
+      - "https://fastapi.tiangolo.com/advanced/"
+      - "https://fastapi.tiangolo.com/reference/"
+    skip_patterns:
+      - "/release-notes"
+      - "/newsletter"
+      - "/external-links"
+    selectors:
+      content: "article"
+      remove:
+        - "nav"
+        - "footer"
+        - ".md-sidebar"
+    chunk_size: 1000
+    overlap: 200
+
+  django:
+    name: "Django"
+    base_url: "https://docs.djangoproject.com"
+    start_urls:
+      - "https://docs.djangoproject.com/en/5.1/"
+    skip_patterns:
+      - "/releases/"
+      - "/internals/"
+      - "/misc/"
+      - "/faq/"
+      - "/genindex/"
+      - "/py-modindex/"
+    selectors:
+      content: "#docs-content"
+      remove:
+        - "nav"
+        - "footer"
+        - ".sphinxsidebar"
+    chunk_size: 1000
+    overlap: 200
+
+  postgresql:
+    name: "PostgreSQL"
+    base_url: "https://www.postgresql.org"
+    start_urls:
+      - "https://www.postgresql.org/docs/current/"
+    skip_patterns:
+      - "/about/"
+      - "/community/"
+      - "/developer/"
+      - "/download/"
+    selectors:
+      content: "#docContent"
+      remove:
+        - "nav"
+        - "footer"
+        - ".navheader"
+        - ".navfooter"
+    chunk_size: 1000
+    overlap: 200
