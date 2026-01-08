@@ -47,8 +47,8 @@ class Settings(BaseSettings):
     max_retries: int = Field(default=3, description="Maximum retry attempts")
     timeout_seconds: int = Field(default=30, description="Request timeout in seconds")
     delay_between_requests: float = Field(
-        default=0.5,
-        description="Delay between requests in seconds",
+        default=0.2,
+        description="Delay between requests in seconds (reduced from 0.5 to 0.2 for faster crawling)",
     )
 
 

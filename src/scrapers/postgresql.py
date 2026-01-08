@@ -20,8 +20,8 @@ class PostgreSQLScraper(BaseScraper):
             # PostgreSQL docs are very extensive
             section_urls = await self.crawl_recursively(
                 start_url=start_url,
-                max_depth=4,  # Deeper crawl for comprehensive coverage
-                link_selector="#docContent",  # PostgreSQL-specific
+                max_depth=3,  # Moderate depth for PostgreSQL's extensive docs
+                link_selector="body",  # Use full page - PostgreSQL has simple structure
             )
             all_urls.update(section_urls)
 

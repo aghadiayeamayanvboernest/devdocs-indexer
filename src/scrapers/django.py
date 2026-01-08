@@ -20,8 +20,8 @@ class DjangoScraper(BaseScraper):
             # Django docs are extensive, use moderate depth
             section_urls = await self.crawl_recursively(
                 start_url=start_url,
-                max_depth=4,  # Deeper crawl for comprehensive coverage
-                link_selector="#docs-content",  # Django-specific selector
+                max_depth=3,  # Moderate depth for Django's deep structure
+                link_selector="main",  # Main content area contains all doc links
             )
             all_urls.update(section_urls)
 

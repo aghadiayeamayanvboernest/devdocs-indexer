@@ -21,8 +21,8 @@ frameworks:
         - "footer"
         - ".sidebar"
         - '[aria-label="Navigation"]'
-    chunk_size: 1000
-    overlap: 200
+    chunk_size: 600
+    overlap: 150
 
   nextjs:
     name: "Next.js"
@@ -41,8 +41,8 @@ frameworks:
         - "nav"
         - "footer"
         - ".sidebar"
-    chunk_size: 1000
-    overlap: 200
+    chunk_size: 600
+    overlap: 150
 
   typescript:
     name: "TypeScript"
@@ -64,8 +64,8 @@ frameworks:
         - "nav"
         - "footer"
         - "#sidebar"
-    chunk_size: 1000
-    overlap: 200
+    chunk_size: 600
+    overlap: 150
 
   tailwind:
     name: "Tailwind CSS"
@@ -87,16 +87,25 @@ frameworks:
         - "nav"
         - "footer"
         - "#sidebar"
-    chunk_size: 1000
-    overlap: 200
+    chunk_size: 600
+    overlap: 150
 
   fastapi:
     name: "FastAPI"
     base_url: "https://fastapi.tiangolo.com"
     start_urls:
       - "https://fastapi.tiangolo.com/tutorial/"
+      - "https://fastapi.tiangolo.com/tutorial/first-steps/"
+      - "https://fastapi.tiangolo.com/tutorial/path-params/"
+      - "https://fastapi.tiangolo.com/tutorial/query-params/"
+      - "https://fastapi.tiangolo.com/tutorial/body/"
       - "https://fastapi.tiangolo.com/advanced/"
+      - "https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/"
+      - "https://fastapi.tiangolo.com/advanced/additional-status-codes/"
       - "https://fastapi.tiangolo.com/reference/"
+      - "https://fastapi.tiangolo.com/reference/apirouter/"
+      - "https://fastapi.tiangolo.com/deployment/"
+      - "https://fastapi.tiangolo.com/how-to/"
     skip_patterns:
       - "/release-notes"
       - "/newsletter"
@@ -107,14 +116,18 @@ frameworks:
         - "nav"
         - "footer"
         - ".md-sidebar"
-    chunk_size: 1000
-    overlap: 200
+    chunk_size: 600
+    overlap: 150
 
   django:
     name: "Django"
     base_url: "https://docs.djangoproject.com"
     start_urls:
       - "https://docs.djangoproject.com/en/5.1/"
+      - "https://docs.djangoproject.com/en/5.1/intro/"
+      - "https://docs.djangoproject.com/en/5.1/topics/"
+      - "https://docs.djangoproject.com/en/5.1/ref/"
+      - "https://docs.djangoproject.com/en/5.1/howto/"
     skip_patterns:
       - "/releases/"
       - "/internals/"
@@ -128,14 +141,19 @@ frameworks:
         - "nav"
         - "footer"
         - ".sphinxsidebar"
-    chunk_size: 1000
-    overlap: 200
+    chunk_size: 600
+    overlap: 150
 
   postgresql:
     name: "PostgreSQL"
     base_url: "https://www.postgresql.org"
     start_urls:
       - "https://www.postgresql.org/docs/current/"
+      - "https://www.postgresql.org/docs/current/tutorial.html"
+      - "https://www.postgresql.org/docs/current/sql.html"
+      - "https://www.postgresql.org/docs/current/admin.html"
+      - "https://www.postgresql.org/docs/current/reference.html"
+      - "https://www.postgresql.org/docs/current/internals.html"
     skip_patterns:
       - "/about/"
       - "/community/"
@@ -148,5 +166,5 @@ frameworks:
         - "footer"
         - ".navheader"
         - ".navfooter"
-    chunk_size: 1000
-    overlap: 200
+    chunk_size: 600
+    overlap: 150

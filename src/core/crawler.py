@@ -192,8 +192,8 @@ class Crawler:
         # Download with progress bar
         self.logger.info(f"Downloading {len(urls)} files for {framework}")
 
-        # Limit concurrent downloads
-        semaphore = asyncio.Semaphore(5)
+        # Limit concurrent downloads (increased from 5 to 10 for better performance)
+        semaphore = asyncio.Semaphore(10)
 
         async def download_one(url_data: dict) -> None:
             async with semaphore:

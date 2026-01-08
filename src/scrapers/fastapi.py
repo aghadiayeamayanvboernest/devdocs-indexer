@@ -20,7 +20,7 @@ class FastAPIScraper(BaseScraper):
             section_urls = await self.crawl_recursively(
                 start_url=start_url,
                 max_depth=4,  # Deeper crawl for comprehensive coverage
-                link_selector="nav",  # FastAPI uses nav for sidebar (Material for MkDocs)
+                link_selector=".md-sidebar--primary",  # Material for MkDocs sidebar with all docs links
             )
             all_urls.update(section_urls)
 
