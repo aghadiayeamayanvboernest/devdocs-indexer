@@ -17,10 +17,10 @@ class DjangoScraper(BaseScraper):
         all_urls: set[str] = set()
 
         for start_url in self.start_urls:
-            # Django docs are extensive, use moderate depth
+            # Django docs are extensive, use shallow depth to avoid exponential crawl
             section_urls = await self.crawl_recursively(
                 start_url=start_url,
-                max_depth=3,  # Moderate depth for Django's deep structure
+                max_depth=2,  # Reduced from 3 to prevent link explosion
                 link_selector="main",  # Main content area contains all doc links
             )
             all_urls.update(section_urls)
