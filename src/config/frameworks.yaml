@@ -121,7 +121,6 @@ frameworks:
     base_url: "https://docs.djangoproject.com"
     start_urls:
       - "https://docs.djangoproject.com/en/5.1/"
-      - "https://docs.djangoproject.com/en/5.1/ref/"
     skip_patterns:
       - "/releases/"
       - "/internals/"
